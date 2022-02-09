@@ -6,11 +6,17 @@ import (
 	"log"
 	"math/rand"
 	"os"
+	"time"
 )
 
 func readFile() string {
-	randIndex := rand.Intn(5)
-	file, err := os.Open("/Users/dengmarcus/Desktop/quote.txt")
+	s1 := rand.NewSource(time.Now().UnixNano())
+	r1 := rand.New(s1)
+	randIndex := r1.Intn(5)
+
+	dir, _ := os.Getwd()
+
+	file, err := os.Open(dir + "/quote.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -20,6 +26,7 @@ func readFile() string {
 	cur := 0
 	for scanner.Scan() {
 		if cur == randIndex {
+			cur = 0
 			return scanner.Text()
 		}
 		cur++
