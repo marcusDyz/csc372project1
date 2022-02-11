@@ -6,8 +6,45 @@ import (
 	"log"
 	"math/rand"
 	"os"
+	"strings"
 	"time"
 )
+
+type cipherKeySet struct {
+	encrypted_key    map[string]string
+	decrypted_key    map[string]string
+	user_guessed_key map[string]string
+}
+
+type alphabetSet struct {
+	alphabet          []string
+	shuffled_alphabet []string
+}
+
+// useful information for shuffling: https://golang.cafe/blog/how-to-shuffle-a-slice-in-go.html
+// initial an alphabetSet struct and shuffle the shuffled_alphabet
+// and return the struct
+func constructAlphabetSet() *alphabetSet {
+
+}
+
+// use the alphabet and the shuffled_alphabet to initial a cipherKeySet struct
+// and return the struct
+func constructKeySet(set alphabetSet) *cipherKeySet {
+
+}
+
+// use the cipherKeySet to encrypt the text
+// return the encrypted text string
+func encryptText(cipher cipherKeySet) string {
+
+}
+
+// decrpyt the encrypted_text based on user's input
+// return the user decrypted text string
+func decryptText(cipher cipherKeySet) string {
+
+}
 
 func readFile() string {
 	s1 := rand.NewSource(time.Now().UnixNano())
@@ -26,7 +63,6 @@ func readFile() string {
 	cur := 0
 	for scanner.Scan() {
 		if cur == randIndex {
-			cur = 0
 			return scanner.Text()
 		}
 		cur++
@@ -35,5 +71,6 @@ func readFile() string {
 }
 
 func main() {
-	fmt.Println(readFile())
+	fmt.Println(strings.ToUpper(readFile()))
+
 }
