@@ -10,3 +10,7 @@ The Go language syntax is a little similar to Java, however, Go language does no
 it uses error which is easy to see which function return errors and to handle them.
 Error is a built-in interface that can be used by programmers efficiently.
 
+For the cryptogram.go file, please run this file in terminal and avoid to run it in an IDE, because 
+running it in an IDE, the function os.Getwd() in readFile() will read the current path of IDE instead of
+the cryptogram.go file, which will failed to read the quotes.txt file and throws an error.
+
