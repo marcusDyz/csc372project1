@@ -1,1 +1,12 @@
+READEME for project 1 
+
+We did 2 Go language program one shows the typical syntax and functionality of Go language.
+Another one shows the special function in Go language called "goroutine"
+
+In the cryptogram.go, you can see several typical go syntax including assigning variable, struct, 
+built-in data structure like map, and unique if statement thatis different from other popular languages
+
+The Go language syntax is a little similar to Java, however, Go language does not have exception, 
+it uses error which is easy to see which function return errors and to handle them.
+Error is a built-in interface that can be used by programmers efficiently.
 
