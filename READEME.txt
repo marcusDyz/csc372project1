@@ -1,6 +1,8 @@
 READEME for project 1 
 Author: Yizhuo Deng and Isabelle J Boyle
 
+Presentation link: https://docs.google.com/presentation/d/1s7_seST9BLCl8XRU0BSBZgAuhDYT4LLblLnMuXSMOdk/edit?usp=sharing 
+
 We did 2 Go language program one shows the typical syntax and functionality of Go language.
 Another one shows the special function in Go language called "goroutine"
 
