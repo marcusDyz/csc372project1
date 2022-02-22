@@ -14,3 +14,9 @@ For the cryptogram.go file, please run this file in terminal and avoid to run it
 running it in an IDE, the function os.Getwd() in readFile() will read the current path of IDE instead of
 the cryptogram.go file, which will failed to read the quotes.txt file and throws an error.
 
+The second file goroutine.go shows the two of the most important special feature of Go language,
+Goroutine and Channel. Goroutine is similar to thread in other language, but the cost of Goroutine is less 
+than a regular thread. In a Go program, main function is the main goroutine, programmers can use the 
+keyword "go" to create a sub goroutine that does other work one's expected.
+If goroutines are the activities of a concurrent Go program, channels are the connections between them.
+Channel allows one goroutine send value(data) to other goroutines. 
